@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="ISO-8859-1">
     <title>Summary page</title>
@@ -10,7 +10,7 @@
 <h3>Details Submitted!!</h3>
 <table>
     <tr>
-        <td>${company.companyDomain}</td>
+        <td>123</td>
     </tr>
 </table>
 

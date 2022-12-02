@@ -2,8 +2,8 @@ package ua.edu.ucu.OOPMiddle.Controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import ua.edu.ucu.OOPMiddle.Company.Company;
 import ua.edu.ucu.OOPMiddle.Service.PageService;
 
@@ -14,14 +14,16 @@ public class PageController {
     private PageService pageService;
 
     @GetMapping("/")
-    public String viewDefaultPage(Model model) {
-        Company company = new Company();
-        model.addAttribute("company", company);
-        return "company";
+    public ModelAndView viewDefaultPage() {
+        return new ModelAndView("form");
     }
 
-    @PostMapping("/submit")
-    public String viewFoundInfo(@ModelAttribute("company") Company company) {
-        return "results";
+    //@ModelAttribute("company") Company company
+    @PostMapping("/")
+    public ModelAndView viewFoundInfo(@RequestParam String domain) {
+        ModelAndView modelAndView = new ModelAndView("company");
+        modelAndView.addObject("domain", domain);
+        modelAndView.addObject("companyName", 123);
+        return modelAndView;
     }
 }
