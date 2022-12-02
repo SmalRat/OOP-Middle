@@ -6,8 +6,8 @@ import ua.edu.ucu.OOPMiddle.Company.Company;
 
 import java.util.Optional;
 
-@Repository
-public interface CompanyRepository extends JpaRepository<Company, Long> {
-//    @Query("SELECT S FROM Domen S WHERE s.name = ?1")
-    Optional<Company> findDomenByName(String name);
-}
+//@Repository
+//public interface CompanyRepository extends JpaRepository<Company, Long> {
+////    @Query("SELECT S FROM Domen S WHERE s.name = ?1")
+//    Optional<Company> findDomenByName(String name);
+//}

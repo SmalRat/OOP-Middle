@@ -3,15 +3,17 @@ package ua.edu.ucu.OOPMiddle.Parsers;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import lombok.SneakyThrows;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ua.edu.ucu.OOPMiddle.Company.Company;
 
 import java.io.IOException;
 
-public class parser implements ParserInterface{
+public class Parser implements ParserInterface{
+    @SneakyThrows
     @Override
-    public Company parseCompany(Company company) throws IOException, UnirestException, JSONException {
+    public void parseCompany(Company company) throws IOException, UnirestException, JSONException {
 //        URL url = new URL("http://jsoup.org");
 //        URL url = new URL("https://brandfetch.com/ucu.edu.ua");
 //        URL url = new URL("https://ucu.edu.ua/");

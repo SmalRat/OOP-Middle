@@ -1,6 +1,7 @@
 package ua.edu.ucu.OOPMiddle.Parsers;
 
 import com.mashape.unirest.http.exceptions.UnirestException;
+import lombok.SneakyThrows;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ua.edu.ucu.OOPMiddle.Company.Company;
@@ -13,8 +14,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class PDLReader implements ParserInterface{
+    @SneakyThrows
     @Override
-    public Company parseCompany(Company company) throws IOException, UnirestException, JSONException {
+    public void parseCompany(Company company) throws IOException, UnirestException, JSONException {
         String API_KEY = "a8edbab5a442900ff41d6e5cafe8c08ec4b967b8865483c5e478434ac029cd23";
         String query = URLEncoder.encode("SELECT NAME FROM COMPANY WHERE WEBSITE='ucu.edu.ua'", StandardCharsets.UTF_8);
         URL url = new URL("https://api.peopledatalabs.com/v5/company/search?sql=" + query);

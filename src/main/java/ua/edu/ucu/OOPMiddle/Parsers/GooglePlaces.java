@@ -7,11 +7,17 @@ import com.google.maps.PlaceDetailsRequest;
 import com.google.maps.TextSearchRequest;
 import com.google.maps.model.PlaceDetails;
 import com.google.maps.model.PlacesSearchResponse;
+import com.mashape.unirest.http.exceptions.UnirestException;
 import lombok.SneakyThrows;
+import org.json.JSONException;
+import ua.edu.ucu.OOPMiddle.Company.Company;
 
-public class GooglePlaces implements {
+import java.io.IOException;
+
+public class GooglePlaces implements ParserInterface{
     @SneakyThrows
-    public static void main(String[] args) {
+    @Override
+    public void parseCompany(Company company) throws IOException, UnirestException, JSONException {
         String API_KEY = "AIzaSyAH4V2nQw2wOHEMrYgJl0gNeuTGtHhouKE";
         String query = "ucu.edu.ua";
         GeoApiContext context = new GeoApiContext.Builder()
@@ -28,6 +34,5 @@ public class GooglePlaces implements {
         System.out.format("Address %s\n",  address);
 
         context.shutdown();
-
     }
 }
