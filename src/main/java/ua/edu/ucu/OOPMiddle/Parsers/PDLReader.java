@@ -13,7 +13,7 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
-public class PDLReader implements ParserInterface{
+public class PDLReader extends Parser{
     @SneakyThrows
     @Override
     public void parseCompany(Company company) throws IOException, UnirestException, JSONException {
@@ -29,5 +29,6 @@ public class PDLReader implements ParserInterface{
         System.out.println(jsonObject);
         System.out.println(jsonObject.getJSONArray("data").getJSONObject(0).getString("name"));
         System.out.println(jsonObject.getJSONArray("data").getJSONObject(0).getInt("employee_count"));
+        fillFields(company);
     }
 }

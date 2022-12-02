@@ -14,7 +14,7 @@ import ua.edu.ucu.OOPMiddle.Company.Company;
 
 import java.io.IOException;
 
-public class GooglePlaces implements ParserInterface{
+public class GooglePlaces extends Parser{
     @SneakyThrows
     @Override
     public void parseCompany(Company company) throws IOException, UnirestException, JSONException {
@@ -25,7 +25,7 @@ public class GooglePlaces implements ParserInterface{
                 .build();
         PlacesSearchResponse placesRespose = new TextSearchRequest(context).query(query).await();
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        String address = placesRespose.results[0].formattedAddress;
+        this.address = placesRespose.results[0].formattedAddress;
         String placeId = placesRespose.results[0].placeId;
 
         PlaceDetails placeDetails = new PlaceDetailsRequest(context).placeId(placeId).await();
@@ -33,6 +33,8 @@ public class GooglePlaces implements ParserInterface{
         System.out.format("Place ID %s\n",  placeId);
         System.out.format("Address %s\n",  address);
 
+
         context.shutdown();
+        fillFields(company);
     }
 }

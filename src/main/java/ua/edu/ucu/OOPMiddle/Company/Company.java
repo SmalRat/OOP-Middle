@@ -27,18 +27,19 @@ public class Company {
             generator = "domen_sequence"
     )
     private Long Id;
-    @NaturalId
-    private String domain;
-    private String name;
-    private String twitter;
-    private String facebook;
-    private String logo;
-    private String icon;
-    private String employees;
-    private String address;
+    //@NaturalId
+    private String domain = null;
+    private String name = null;
+    private String twitter = null;
+    private String facebook = null;
+    private String logo = null;
+    private String icon = null;
+    private String employees = null;
+    private String address = null;
 
-    public Company(String name, String twitter, String facebook, String logo, String icon, String employees, String address) {
+    public Company(String name, String domain, String twitter, String facebook, String logo, String icon, String employees, String address) {
         this.name = name;
+        this.domain = domain;
         this.twitter = twitter;
         this.facebook = facebook;
         this.logo = logo;
@@ -51,6 +52,7 @@ public class Company {
     public String toString() {
         return "Company{" +
                 "Id=" + Id +
+                ", domain= " + domain +'\'' +
                 ", name='" + name + '\'' +
                 ", twitter='" + twitter + '\'' +
                 ", facebook='" + facebook + '\'' +

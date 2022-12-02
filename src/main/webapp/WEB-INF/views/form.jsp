@@ -3,8 +3,6 @@
 <head>
     <style>
         body {
-        width: auto;
-        height: auto;
         height: 100%;
         margin: 0;
         background-color: black;
@@ -30,7 +28,6 @@
         size: 40px;
         text-align: center;
         margin-left: 444px;
-        position: fixed;
         height: 3rem;
         width: 25rem;
         background: transparent linear-gradient(to top left, rgba(249, 208, 129, .2) 0%, rgba(227, 2, 62, .2) 40%, rgba(49, 128, 135, .2) 100%);
@@ -101,7 +98,7 @@
             <br>
           <input type="text" name="domain" class="form1" placeholder="ex. google.com"  />
          <br> <br> <br>
-           <input type="submit" class="gradient-button">Find</input>
+           <input type="submit">Find</input>
 </form>
 </body>
 </html>

@@ -12,13 +12,7 @@
             color: transparent;
         }
         h1{
-            color: azure;
-            font-size: 40px;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            text-align: center;
-            left: 400px;
-        }
-        h1{
+            margin-top: 120px;
             color: azure;
             font-size: 40px;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -28,14 +22,6 @@
         h1:hover{
             font-size: 42px;
             color: beige;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            text-align: center;
-            left: 400px;
-        }
-        h2{
-            margin-top: 120px;
-            color: azure;
-            font-size: 40px;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             text-align: center;
             left: 400px;
@@ -102,66 +88,17 @@
             border-image-source: linear-gradient(to bottom left, rgba(249,208,129,1) 20%, rgba(227,2,62,1) 40%, rgba(49,128,135,1) 70%);
             transition: opacity .5s;
         }
-        tr{
-            background-color: greenyellow;
-            border: green solid;
-            border-radius: 9px;
-        }
 
         .gradient-button:hover::after {
             opacity: 1;
-        }
-        .companies{
-            background-color: white;
-            height: 400px;
-            width: 400px;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: black;
-            position: center;
-            margin-left: 450px;
         }
     </style>
     <title>Found!</title>
 </head>
 <body>
-<h1>Company + ${companyName} found!</h1>
-<br> <br>
-<table class="companies">
-    <tr>
-        <th>Company</th>
-        <th>${companyName}</th>
-    </tr>
-    <tr>
-        <th>Twitter</th>
-        <th>${twitter}</th>
-    </tr>
-    <tr>
-        <th>Youtube</th>
-        <th>${youtube}</th>
-    </tr>
-    <tr>
-        <th>Logo</th>
-        <th>${logo}</th>
-    </tr>
-    <tr>
-        <th>Icon</th>
-        <th>${icon}</th>
-    </tr>
-    <tr>
-        <th>Employees</th>
-        <th>${employees}</th>
-    </tr>
-    <tr>
-        <th>Address</th>
-        <th>${address}</th>
-    </tr>
-    <tr>
-        <th>Domain</th>
-        <th>${domain}</th>
-    </tr>
 
-</table>
-
+<h2>${companyName}</h2>
+<p>${domain}</p>
 
 </body>
 </html>
