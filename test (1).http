@@ -1,0 +1,17 @@
+GET http://localhost:8080/api/v1/company
+
+###
+POST http://localhost:8080/api/v1/company
+Content-Type: application/json
+
+{
+  "name": "Ukrainjhguian Catholic University",
+  "twitter": "https://twitter.com/ucu_university",
+  "facebook": "https://www.facebook.com/UkrainianCatholicUniversity",
+  "logo": "https://mywebsite.com/logo.png",
+  "icon": "https://mywebsite.com/icon.png",
+  "employees": "501-100000",
+  "address": "18 Sventsitskoho street, Lviv, Ukraine"
+}
+
+<> 2022-12-02T181744.500.json

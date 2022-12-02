@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import ua.edu.ucu.OOPMiddle.Company.Company;
 import ua.edu.ucu.OOPMiddle.Service.PageService;
 
 @Controller
@@ -22,8 +21,10 @@ public class PageController {
     @PostMapping("/")
     public ModelAndView viewFoundInfo(@RequestParam String domain) {
         ModelAndView modelAndView = new ModelAndView("company");
-        modelAndView.addObject("domain", domain);
+        pageService.searchCompany(modelAndView, domain);
+
         modelAndView.addObject("companyName", 123);
+
         return modelAndView;
     }
 }
