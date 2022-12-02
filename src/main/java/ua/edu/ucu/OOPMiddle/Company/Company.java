@@ -22,6 +22,7 @@ public class Company {
     @GeneratedValue
     private int id;
     @NaturalId
+    private String companyDomain;
     private String companyName;
     private String twitterUrl;
     private String facebookUrl;
@@ -38,6 +39,7 @@ public class Company {
                 ", companyLogo: " + this.companyLogo +
                 ", companyIcon: " + this.companyIcon +
                 ", numberEmployees: " + this.numberEmployees +
-                ", companyAddress: " + this.companyAddress + ")";
+                ", companyAddress: " + this.companyAddress +
+                ", companyDomain: " + this.companyDomain + ")";
     }
 }
