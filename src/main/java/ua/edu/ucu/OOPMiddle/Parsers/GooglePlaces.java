@@ -19,7 +19,7 @@ public class GooglePlaces extends Parser{
     @Override
     public void parseCompany(Company company) throws IOException, UnirestException, JSONException {
         String API_KEY = "AIzaSyAH4V2nQw2wOHEMrYgJl0gNeuTGtHhouKE";
-        String query = "ucu.edu.ua";
+        String query = company.getDomain();
         GeoApiContext context = new GeoApiContext.Builder()
                 .apiKey(API_KEY)
                 .build();

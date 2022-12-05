@@ -124,12 +124,12 @@
     <title>Found!</title>
 </head>
 <body>
-<h1>Company + ${companyName} found!</h1>
+<h1>Company ${name} found!</h1>
 <br> <br>
 <table class="companies">
     <tr>
         <th>Company</th>
-        <th>${companyName}</th>
+        <th>${name}</th>
     </tr>
     <tr>
         <th>Twitter</th>

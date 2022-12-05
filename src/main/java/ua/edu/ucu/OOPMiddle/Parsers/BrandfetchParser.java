@@ -31,7 +31,7 @@ public class BrandfetchParser extends Parser{
 //        Response response = client.newCall(request).execute();
 //        System.out.println(response);
         Unirest.setTimeouts(0, 0);
-        HttpResponse<String> response = Unirest.get("https://api.brandfetch.io/v2/brands/ucu.edu.ua")
+        HttpResponse<String> response = Unirest.get("https://api.brandfetch.io/v2/brands/" + company.getDomain())
                 .header("Authorization", "Bearer d6FgEWLZdjrilBTpymacanGX6SvGrGFKMPmY3ZJsfMM=")
                 .asString();
 //        System.out.println(response.getBody());
