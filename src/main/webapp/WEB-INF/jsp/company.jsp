@@ -136,8 +136,8 @@
         <th>${twitter}</th>
     </tr>
     <tr>
-        <th>Youtube</th>
-        <th>${youtube}</th>
+        <th>Facebook</th>
+        <th>${facebook}</th>
     </tr>
     <tr>
         <th>Logo</th>

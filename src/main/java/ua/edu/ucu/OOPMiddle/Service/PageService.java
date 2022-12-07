@@ -20,10 +20,11 @@ public class PageService {
     CompanyRepository companyRepository;
     public void searchCompany(ModelAndView modelAndView, String domain) throws UnirestException, JSONException, IOException {
         Optional<Company> domainOptional = companyRepository
-                .findDomainByName(domain);
+                .findCompanyByDomain(domain);
         modelAndView.addObject("domain", domain);
         Company company;
         if (domainOptional.isEmpty()){
+            System.out.println("******************************************************************");
             company = parseCompany(domain);
             companyRepository.save(company);
         }
